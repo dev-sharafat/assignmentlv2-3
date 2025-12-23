@@ -20,3 +20,15 @@ WHERE NOT EXISTS (
   FROM bookings b
   WHERE b.vehicle_id = v.vehicle_id
 );
+
+
+--------------WHERE-------------
+SELECT *
+FROM vehicles
+WHERE status = 'available'
+AND type = 'car';
+
+
+
+
+
