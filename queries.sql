@@ -29,6 +29,17 @@ WHERE status = 'available'
 AND type = 'car';
 
 
+----------GROUP BY + HAVING--------
+
+
+SELECT 
+  v.name AS vehicle_name,
+  COUNT(b.booking_id) AS total_bookings
+FROM bookings b
+JOIN vehicles v ON b.vehicle_id = v.vehicle_id
+GROUP BY v.name
+HAVING COUNT(b.booking_id) > 2;
+
 
 
 
