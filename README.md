@@ -104,9 +104,8 @@ Viewing complete booking history
 
 Admin reporting and dashboards
 
-```sql Query 2: NOT EXISTS
-sql
-Copy code
+### Query 2: NOT EXISTS
+```sql 
 SELECT *
 FROM vehicles v
 WHERE NOT EXISTS (
@@ -126,10 +125,8 @@ Use Case:
 Identifying unused or underutilized vehicles
 
 Business analysis and inventory optimization
+### Query 3: WHERE Clause
 ```sql
-Query 3: WHERE Clause
-sql
-Copy code
 SELECT *
 FROM vehicles
 WHERE status = 'available'
@@ -146,10 +143,8 @@ Use Case:
 Showing available cars to customers during booking
 
 Real-time availability filtering
+### Query 4: GROUP BY and HAVING
 ```sql
-Query 4: GROUP BY and HAVING
-sql
-Copy code
 SELECT 
   v.name AS vehicle_name,
   COUNT(b.booking_id) AS total_bookings
